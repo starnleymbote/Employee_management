@@ -21,6 +21,7 @@ class CountryResource extends Resource
     protected static ?string $model = Country::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationGroup = 'System Management';
 
     public static function form(Form $form): Form
     {
@@ -28,8 +29,8 @@ class CountryResource extends Resource
             ->schema([
                 Card::make()
                 ->schema([
-                    TextInput::make('country_code'),
-                    TextInput::make('name'),
+                    TextInput::make('country_code')->required(),
+                    TextInput::make('name')->required(),
                 ]),
 
                 
