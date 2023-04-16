@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
@@ -10,15 +11,15 @@ class Employee extends Model
     use HasFactory;
 
     protected $fillable = [
-        'firstname',
-        'lastname',
+        'first_name',
+        'last_name',
         'state_id',
         'city_id',
         'country_id',
         'address',
         'department_id',
         'zip_code',
-        'birth_date',
+        'date_of_birth',
         'date_hired',
     ];
 
